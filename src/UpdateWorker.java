@@ -3,6 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * A SwingWorker that handles loading or updating the schedule of a channel
+ *
+ * @author ens19amn - Ask Norheim Morken
+ */
 public class UpdateWorker extends SwingWorker<List<Episode>, Object> {
 
     private MainWindow mainWindow;
@@ -23,6 +28,10 @@ public class UpdateWorker extends SwingWorker<List<Episode>, Object> {
         id = model.getCurrentChannelId();
     }
 
+    /**
+     * Gets episodes on a separate thread
+     * @return a list of episodes
+     */
     @Override
     protected List<Episode> doInBackground() {
         EpisodeXMLReader xmlReader = new EpisodeXMLReader(id);
@@ -32,6 +41,10 @@ public class UpdateWorker extends SwingWorker<List<Episode>, Object> {
         return new ArrayList<>();
     }
 
+    /**
+     * Gets the loaded episodes and sets them to the EpisodeModel used to hold the data for the table when the
+     * SwingWorker is done executing.
+     */
     @Override
     protected void done() {
         try {

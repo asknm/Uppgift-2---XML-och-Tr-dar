@@ -4,6 +4,9 @@ import java.awt.*;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Used to render a table cell with ZonedDateTime
+ */
 public class ZonedDateTimeRenderer implements TableCellRenderer {
 
     private static final String dateTimeFormat = "dd/MM - HH:mm:ss";

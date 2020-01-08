@@ -17,6 +17,11 @@ import java.util.List;
 
 import static java.time.format.DateTimeFormatter.ISO_DATE_TIME;
 
+/**
+ * Handles reading the episodes in the schedule of a channel
+ *
+ * @author ens19amn - Ask Norheim Morken
+ */
 public class EpisodeXMLReader {
 
     private int channelId;
@@ -26,11 +31,20 @@ public class EpisodeXMLReader {
         this.channelId = channelId;
     }
 
+    /**
+     * Gets episodes from the channel's schedule
+     * @return a list of episodes
+     */
     public List<Episode> getEpisodes() {
         String url = "http://api.sr.se/api/v2/scheduledepisodes?channelid=" + channelId;
         return getEpisodes(url);
     }
 
+    /**
+     * Gets episodes from the channel's schedule for the day after the given ZonedDateTime
+     * @param zonedDateTime the ZonedDateTime
+     * @return the list of episodes
+     */
     public List<Episode> getEpisodes(ZonedDateTime zonedDateTime) {
         ZonedDateTime dayAfter = zonedDateTime.plusDays(1);
         String dateStr = DateTimeFormatter.ofPattern("yyyy-MM-dd").format(dayAfter);
@@ -38,6 +52,12 @@ public class EpisodeXMLReader {
         return getEpisodes(url);
     }
 
+    /**
+     * Loads episodes from a given url and adds episodes from the next page or the next day until the episodes are
+     * more than 12 hours away.
+     * @param url the url to start loading episodes from
+     * @return the list of episodes
+     */
     private List<Episode> getEpisodes(String url) {
         List<Episode> episodes = new ArrayList<>();
 

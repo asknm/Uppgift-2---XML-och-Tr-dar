@@ -3,6 +3,8 @@ import java.time.ZonedDateTime;
 
 /**
  * The controller for the application
+ *
+ * @author ens19amn - Ask Norheim Morken
  */
 public class Controller {
 

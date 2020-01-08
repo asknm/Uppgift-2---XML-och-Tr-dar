@@ -2,6 +2,11 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 
+/**
+ * Used to render a cell with a string with the correct background color
+ *
+ * @author ens19amn - Ask Norheim Morken
+ */
 public class StringRenderer extends DefaultTableCellRenderer {
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,

@@ -1,12 +1,13 @@
 import javax.swing.table.AbstractTableModel;
 import java.awt.*;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * A class to manage the table data
+ *
+ * @author ens19amn - Ask Norheim Morken
  */
 public class EpisodeModel extends AbstractTableModel {
 
@@ -103,6 +104,11 @@ public class EpisodeModel extends AbstractTableModel {
         }
     }
 
+    /**
+     * Gets the episode at a given row
+     * @param row the row
+     * @return the episode
+     */
     public Episode getEpisode(int row) {
         return episodeList.get(row);
     }

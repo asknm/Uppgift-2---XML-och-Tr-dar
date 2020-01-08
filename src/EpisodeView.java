@@ -2,6 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * A window to display more information about an episode
+ *
+ * @author ens19amn - Ask Norheim Morken
+ */
 public class EpisodeView extends JFrame {
 
     private static final String dateTimeFormat = "dd/MM - HH:mm:ss";

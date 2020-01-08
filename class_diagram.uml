@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="333.0" y="1040.8678385416665">com</node>
+    <node x="242.0" y="966.8678385416666">netscape</node>
+    <node x="440.62500000000006" y="763.0">Start</node>
+    <node x="237.75000000000006" y="188.0">TableMouseListener</node>
+    <node x="754.125" y="555.0">UpdateWorker</node>
+    <node x="618.0" y="837.0">toolbarButtonGraphics</node>
+    <node x="489.0" y="1040.8678385416665">sun</node>
+    <node x="231.00000000000006" y="89.0">EpisodeView</node>
+    <node x="0.0" y="966.8678385416666">groovyjarjarasm</node>
+    <node x="170.0" y="1040.8678385416665">java</node>
+    <node x="288.47961309523805" y="555.0">ChannelWorker</node>
+    <node x="0.0" y="1040.8678385416665">javax</node>
+    <node x="603.2540922619048" y="317.0">MainWindow</node>
+    <node x="0.0" y="317.0">ChannelXMLReader</node>
+    <node x="626.0" y="966.8678385416666">images</node>
+    <node x="886.9107142857143" y="89.0">EpisodeXMLReader</node>
+    <node x="645.0" y="1040.8678385416665">org</node>
+    <node x="119.75000000000006" y="188.0">Channel</node>
+    <node x="659.179613095238" y="89.0">EpisodeModel</node>
+    <node x="602.75" y="188.0">ZonedDateTimeRenderer</node>
+    <node x="422.62500000000006" y="684.0">Controller</node>
+    <node x="434.0" y="966.8678385416666">META-INF</node>
+    <node x="801.0" y="1040.8678385416665">jdk</node>
+    <node x="710.679613095238" y="0.0">Episode</node>
+    <node x="803.0" y="966.8678385416666">groovy</node>
+    <node x="434.75000000000006" y="188.0">StringRenderer</node>
+    <node x="439.26532738095233" y="446.0">Model</node>
+    <node x="326.0" y="850.451171875">groovyjarjarcommonscli</node>
+    <node x="40.0" y="852.8678385416666">groovyjarjarantlr</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="EpisodeXMLReader" target="Episode">
+      <point x="40.75" y="-14.5" />
+      <point x="1009.1607142857143" y="49.0" />
+      <point x="801.679613095238" y="49.0" />
+      <point x="42.0" y="14.5" />
+    </edge>
+    <edge source="ZonedDateTimeRenderer" target="EpisodeModel">
+      <point x="0.0" y="-14.5" />
+      <point x="702.25" y="168.0" />
+      <point x="726.179613095238" y="168.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="MainWindow" target="EpisodeModel">
+      <point x="51.42857142857146" y="-14.5" />
+      <point x="714.6826636904764" y="297.0" />
+      <point x="834.25" y="297.0" />
+      <point x="834.25" y="148.0" />
+      <point x="783.6081845238095" y="148.0" />
+      <point x="57.428571428571445" y="14.5" />
+    </edge>
+    <edge source="MainWindow" target="Channel">
+      <point x="-51.42857142857139" y="-14.5" />
+      <point x="611.8255208333335" y="257.0" />
+      <point x="210.75000000000006" y="257.0" />
+      <point x="42.0" y="14.5" />
+    </edge>
+    <edge source="ChannelWorker" target="ChannelXMLReader">
+      <point x="-40.28571428571422" y="-14.5" />
+      <point x="318.69389880952383" y="525.0" />
+      <point x="87.0" y="525.0" />
+      <point x="87.0" y="426.0" />
+      <point x="122.25" y="426.0" />
+      <point x="40.75" y="14.5" />
+    </edge>
+    <edge source="Controller" target="UpdateWorker">
+      <point x="42.0" y="-14.5" />
+      <point x="524.625" y="654.0" />
+      <point x="787.625" y="654.0" />
+      <point x="-33.5" y="14.5" />
+    </edge>
+    <edge source="ChannelWorker" target="Channel">
+      <point x="-20.14285714285711" y="-14.5" />
+      <point x="338.83675595238094" y="515.0" />
+      <point x="173.50000000000006" y="515.0" />
+      <point x="173.50000000000006" y="297.0" />
+      <point x="154.75000000000006" y="297.0" />
+      <point x="-14.0" y="14.5" />
+    </edge>
+    <edge source="Model" target="Channel">
+      <point x="-33.60000000000002" y="-14.5" />
+      <point x="447.6653273809523" y="386.0" />
+      <point x="222.62500000000006" y="386.0" />
+      <point x="222.62500000000006" y="287.0" />
+      <point x="168.75000000000006" y="287.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="ChannelWorker" target="MainWindow">
+      <point x="0.0" y="-14.5" />
+      <point x="358.97961309523805" y="495.0" />
+      <point x="405.2117559523809" y="495.0" />
+      <point x="405.2117559523809" y="396.0" />
+      <point x="610.7540922619048" y="396.0" />
+      <point x="-52.5" y="14.5" />
+    </edge>
+    <edge source="Controller" target="ChannelWorker">
+      <point x="-42.0" y="-14.5" />
+      <point x="440.62500000000006" y="654.0" />
+      <point x="394.22961309523805" y="654.0" />
+      <point x="35.25" y="14.5" />
+    </edge>
+    <edge source="ChannelWorker" target="Model">
+      <point x="60.428571428571445" y="-14.5" />
+      <point x="419.4081845238095" y="525.0" />
+      <point x="455.01532738095233" y="525.0" />
+      <point x="-26.25" y="14.5" />
+    </edge>
+    <edge source="StringRenderer" target="EpisodeModel">
+      <point x="0.0" y="-14.5" />
+      <point x="508.75000000000006" y="158.0" />
+      <point x="707.0367559523809" y="158.0" />
+      <point x="-19.142857142857167" y="14.5" />
+    </edge>
+    <edge source="Model" target="Controller">
+      <point x="-15.75" y="14.5" />
+      <point x="465.51532738095233" y="535.0" />
+      <point x="439.97961309523805" y="535.0" />
+      <point x="439.97961309523805" y="644.0" />
+      <point x="452.62500000000006" y="644.0" />
+      <point x="-30.0" y="-14.5" />
+    </edge>
+    <edge source="MainWindow" target="ZonedDateTimeRenderer">
+      <point x="0.0" y="-14.5" />
+      <point x="663.2540922619048" y="267.0" />
+      <point x="702.25" y="267.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="UpdateWorker" target="MainWindow">
+      <point x="-19.142857142857167" y="-14.5" />
+      <point x="801.9821428571429" y="505.0" />
+      <point x="746.8790922619048" y="505.0" />
+      <point x="746.8790922619048" y="406.0" />
+      <point x="700.7540922619048" y="406.0" />
+      <point x="37.5" y="14.5" />
+    </edge>
+    <edge source="groovyjarjarcommonscli" target="groovyjarjarcommonscli">
+      <point x="61.75" y="14.5" />
+      <point x="511.25" y="909.451171875" />
+      <point x="296.0" y="909.451171875" />
+      <point x="296.0" y="857.701171875" />
+      <point x="-123.5" y="-7.25" />
+    </edge>
+    <edge source="Controller" target="MainWindow">
+      <point x="18.0" y="-14.5" />
+      <point x="500.62500000000006" y="634.0" />
+      <point x="715.3790922619048" y="634.0" />
+      <point x="715.3790922619048" y="426.0" />
+      <point x="670.7540922619048" y="426.0" />
+      <point x="7.5" y="14.5" />
+    </edge>
+    <edge source="UpdateWorker" target="EpisodeXMLReader">
+      <point x="38.28571428571428" y="-14.5" />
+      <point x="859.4107142857143" y="525.0" />
+      <point x="959.7153273809523" y="525.0" />
+      <point x="959.7153273809523" y="168.0" />
+      <point x="927.6607142857143" y="168.0" />
+      <point x="-40.75" y="14.5" />
+    </edge>
+    <edge source="TableMouseListener" target="Episode">
+      <point x="-70.79999999999995" y="-14.5" />
+      <point x="255.4500000000001" y="168.0" />
+      <point x="220.50000000000006" y="168.0" />
+      <point x="220.50000000000006" y="49.0" />
+      <point x="717.679613095238" y="49.0" />
+      <point x="-42.0" y="14.5" />
+    </edge>
+    <edge source="MainWindow" target="TableMouseListener">
+      <point x="-34.28571428571428" y="-14.5" />
+      <point x="628.9683779761906" y="247.0" />
+      <point x="326.25000000000006" y="247.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Controller" target="Model">
+      <point x="-6.0" y="-14.5" />
+      <point x="476.62500000000006" y="614.0" />
+      <point x="486.76532738095233" y="614.0" />
+      <point x="5.25" y="14.5" />
+    </edge>
+    <edge source="groovyjarjarantlr" target="groovyjarjarantlr">
+      <point x="70.33333333333331" y="14.5" />
+      <point x="215.83333333333331" y="921.8678385416666" />
+      <point x="0.0" y="921.8678385416666" />
+      <point x="0.0" y="857.701171875" />
+      <point x="-105.5" y="-9.666666666666664" />
+    </edge>
+    <edge source="EpisodeModel" target="Episode">
+      <point x="-33.5" y="-14.5" />
+      <point x="692.679613095238" y="69.0" />
+      <point x="745.679613095238" y="69.0" />
+      <point x="-14.0" y="14.5" />
+    </edge>
+    <edge source="TableMouseListener" target="EpisodeView">
+      <point x="0.0" y="-14.5" />
+      <point x="31.75" y="14.5" />
+    </edge>
+    <edge source="UpdateWorker" target="Model">
+      <point x="-57.428571428571416" y="-14.5" />
+      <point x="763.6964285714287" y="525.0" />
+      <point x="507.51532738095233" y="525.0" />
+      <point x="26.25" y="14.5" />
+    </edge>
+    <edge source="Model" target="MainWindow">
+      <point x="33.60000000000002" y="-14.5" />
+      <point x="514.8653273809523" y="426.0" />
+      <point x="655.7540922619048" y="426.0" />
+      <point x="-7.5" y="14.5" />
+    </edge>
+    <edge source="MainWindow" target="StringRenderer">
+      <point x="-17.142857142857167" y="-14.5" />
+      <point x="646.1112351190477" y="237.0" />
+      <point x="508.75000000000006" y="237.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="TableMouseListener" target="EpisodeModel">
+      <point x="70.79999999999995" y="-14.5" />
+      <point x="397.05" y="148.0" />
+      <point x="687.8938988095238" y="148.0" />
+      <point x="-38.28571428571428" y="14.5" />
+    </edge>
+    <edge source="UpdateWorker" target="Episode">
+      <point x="19.142857142857167" y="-14.5" />
+      <point x="840.2678571428572" y="515.0" />
+      <point x="876.4107142857143" y="515.0" />
+      <point x="876.4107142857143" y="69.0" />
+      <point x="773.679613095238" y="69.0" />
+      <point x="14.0" y="14.5" />
+    </edge>
+    <edge source="EpisodeView" target="Episode">
+      <point x="0.0" y="-14.5" />
+      <point x="294.50000000000006" y="59.0" />
+      <point x="731.679613095238" y="59.0" />
+      <point x="-28.0" y="14.5" />
+    </edge>
+    <edge source="Start" target="Controller">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="ChannelXMLReader" target="Channel">
+      <point x="-40.75" y="-14.5" />
+      <point x="40.75" y="287.0" />
+      <point x="126.75000000000006" y="287.0" />
+      <point x="-42.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6827004219409282" x="1124.602272727273" y="674.0122377622379" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

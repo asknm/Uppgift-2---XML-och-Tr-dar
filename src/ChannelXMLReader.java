@@ -12,13 +12,28 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Handles the actual loading of the channel data from the API when called from the ChannelWorker
+ *
+ * @author ens19amn - Ask Norheim Morken
+ */
 public class ChannelXMLReader {
 
+    /**
+     * Gets all available channels from API
+     * @return a list of channels
+     */
     public List<Channel> getChannels() {
         String url = "http://api.sr.se/api/v2/channels/";
         return getChannels(url);
     }
 
+    /**
+     * Gets all available channels from a given url and calls it self recursively with the url of the next page if it
+     * is available and adds the result to the list of episodes that are returned
+     * @param url the url to load channels from
+     * @return a list of channels from this url and next pages if available
+     */
     private List<Channel> getChannels(String url) {
         List<Channel> channels = new ArrayList<>();
         Element root;

@@ -2,6 +2,11 @@ import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/**
+ * A mouse listener that displays more information about an episode in a separate view
+ *
+ * @author ens19amn - Ask Norheim Morken
+ */
 public class TableMouseListener implements MouseListener {
 
     private EpisodeModel episodeModel;
@@ -12,6 +17,10 @@ public class TableMouseListener implements MouseListener {
         this.table = table;
     }
 
+    /**
+     * Displays more information about the episode who's row was clicked
+     * @param e mouse event
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         Episode episode = episodeModel.getEpisode(table.getSelectedRow());
