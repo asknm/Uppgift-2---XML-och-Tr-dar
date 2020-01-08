@@ -14,7 +14,7 @@ public class ChannelWorker extends SwingWorker<List<Channel>, Object> {
 
     @Override
     protected List<Channel> doInBackground() {
-        XMLReader xmlReader = new XMLReader();
+        ChannelXMLReader xmlReader = new ChannelXMLReader();
         return xmlReader.getChannels();
     }
 

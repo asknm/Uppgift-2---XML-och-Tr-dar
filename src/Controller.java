@@ -12,8 +12,6 @@ public class Controller {
 
     public Controller() {
         mainWindow.addUpdateMenuItemListener(actionEvent -> update());
-        mainWindow.addDescriptionListener(actionEvent -> toggleDescription(actionEvent.getSource()));
-        mainWindow.addImageListener(actionEvent -> toggleImage(actionEvent.getSource()));
         ChannelWorker channelWorker = new ChannelWorker(mainWindow, model);
         channelWorker.execute();
     }
@@ -51,16 +49,6 @@ public class Controller {
      */
     public void setChannelListener() {
         mainWindow.setChannelListener(actionEvent -> update(actionEvent.getSource()));
-    }
-
-    private void toggleDescription(Object source) {
-        JCheckBoxMenuItem checkBoxMenuItem = (JCheckBoxMenuItem) source;
-        mainWindow.getEpisodeModel().toggleDescription(checkBoxMenuItem.getState());
-    }
-
-    private void toggleImage(Object source) {
-        JCheckBoxMenuItem checkBoxMenuItem = (JCheckBoxMenuItem) source;
-        mainWindow.getEpisodeModel().toggleImage(checkBoxMenuItem.getState());
     }
 
 }

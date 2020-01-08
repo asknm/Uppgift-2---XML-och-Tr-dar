@@ -25,9 +25,9 @@ public class UpdateWorker extends SwingWorker<List<Episode>, Object> {
 
     @Override
     protected List<Episode> doInBackground() {
-        XMLReader xmlReader = new XMLReader();
+        EpisodeXMLReader xmlReader = new EpisodeXMLReader(id);
         if (id != -1) {
-            return xmlReader.getEpisodes(id);
+            return xmlReader.getEpisodes();
         }
         return new ArrayList<>();
     }

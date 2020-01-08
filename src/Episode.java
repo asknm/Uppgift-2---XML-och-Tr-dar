@@ -1,4 +1,9 @@
+import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.ZonedDateTime;
 
 public class Episode {
@@ -7,14 +12,15 @@ public class Episode {
     private ZonedDateTime startTime;
     private ZonedDateTime endTime;
     private String description;
-    private BufferedImage image;
+    private String imageUrl;
+    private ImageIcon imageIcon;
 
-    public Episode(String title, ZonedDateTime startTime, ZonedDateTime endTime, String description, BufferedImage image) {
+    public Episode(String title, ZonedDateTime startTime, ZonedDateTime endTime, String description, String imageUrl) {
         this.title = title;
         this.startTime = startTime;
         this.endTime = endTime;
         this.description = description;
-        this.image = image;
+        this.imageUrl = imageUrl;
     }
 
     public String getTitle() {
@@ -33,7 +39,16 @@ public class Episode {
         return description;
     }
 
-    public BufferedImage getImage() {
-        return image;
+    public ImageIcon getImageIcon() {
+        if (imageIcon == null) {
+            try {
+                URL url = new URL(imageUrl);
+                BufferedImage c = ImageIO.read(url);
+                imageIcon = new ImageIcon(c);
+            } catch (IOException e) {
+                return null;
+            }
+        }
+        return imageIcon;
     }
 }

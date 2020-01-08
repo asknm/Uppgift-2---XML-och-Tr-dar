@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -11,8 +11,6 @@ public class MainWindow extends JFrame {
     private JMenu channelMenu = new JMenu("Channels");
     private JMenuItem updateMenuItem = new JMenuItem("Update");
     private EpisodeModel episodeModel = new EpisodeModel();
-    private JCheckBoxMenuItem descriptionMenuItem = new JCheckBoxMenuItem("Description");
-    private JCheckBoxMenuItem imageMenuItem = new JCheckBoxMenuItem("Image");
 
     public MainWindow() {
         super("RadioInfo");
@@ -26,16 +24,12 @@ public class MainWindow extends JFrame {
         updateMenu.add(updateMenuItem);
         menuBar.add(updateMenu);
 
-        JMenu columnMenu = new JMenu("Columns");
-        columnMenu.add(descriptionMenuItem);
-        columnMenu.add(imageMenuItem);
-        menuBar.add(columnMenu);
-
         setJMenuBar(menuBar);
 
         JTable table = new JTable(episodeModel);
-        table.setDefaultRenderer(String.class, new Renderer());
-        table.setDefaultRenderer(BufferedImage.class, new ImageRenderer());
+        table.addMouseListener(new TableMouseListener(episodeModel, table));
+        table.setDefaultRenderer(String.class, new StringRenderer());
+        table.setDefaultRenderer(ZonedDateTime.class, new ZonedDateTimeRenderer());
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane);
 
@@ -48,22 +42,6 @@ public class MainWindow extends JFrame {
      */
     public void addUpdateMenuItemListener(ActionListener listener) {
         updateMenuItem.addActionListener(listener);
-    }
-
-    /**
-     * Adds an action listener to the description checkbox menu item
-     * @param listener the ActionListener
-     */
-    public void addDescriptionListener(ActionListener listener) {
-        descriptionMenuItem.addActionListener(listener);
-    }
-
-    /**
-     * Adds an action listener to the image checkbox menu item
-     * @param listener the ActionListener
-     */
-    public void addImageListener(ActionListener listener) {
-        imageMenuItem.addActionListener(listener);
     }
 
     /**

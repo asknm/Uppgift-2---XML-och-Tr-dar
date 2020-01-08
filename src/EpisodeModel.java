@@ -1,7 +1,7 @@
 import javax.swing.table.AbstractTableModel;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,13 +59,9 @@ public class EpisodeModel extends AbstractTableModel {
             case "Title":
                 return episode.getTitle();
             case "Start":
-                return String.valueOf(episode.getStartTime());
+                return episode.getStartTime();
             case "End":
-                return String.valueOf(episode.getEndTime());
-            case "Description":
-                return episode.getDescription();
-            case "Image":
-                return episode.getImage();
+                return episode.getEndTime();
         }
         return null;
     }
@@ -77,10 +73,10 @@ public class EpisodeModel extends AbstractTableModel {
      */
     public Class<?> getColumnClass(int columnIndex) {
         switch (getColumnName(columnIndex)) {
-            case "Image":
-                return BufferedImage.class;
-            default:
+            case "Title":
                 return String.class;
+            default:
+                return ZonedDateTime.class;
         }
     }
 
@@ -107,19 +103,7 @@ public class EpisodeModel extends AbstractTableModel {
         }
     }
 
-    public void toggleDescription(boolean state) {
-        columnNames.remove("Description");
-        if (state) {
-            columnNames.add("Description");
-        }
-        fireTableStructureChanged();
-    }
-
-    public void toggleImage(boolean state) {
-        columnNames.remove("Image");
-        if (state) {
-            columnNames.add("Image");
-        }
-        fireTableStructureChanged();
+    public Episode getEpisode(int row) {
+        return episodeList.get(row);
     }
 }
